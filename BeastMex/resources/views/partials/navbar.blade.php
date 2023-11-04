@@ -35,8 +35,8 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Registrar proveedor</a></li>
-            <li><a class="dropdown-item" href="#">Consultar orden de compra</a></li>
-            <li><a class="dropdown-item" href="#">Buscar productos</a></li>
+            <li><a class="dropdown-item" href="/consultarOrdenCompra">Consultar orden de compra</a></li>
+            <li><a class="dropdown-item" href="/buscarProductos">Buscar productos</a></li>
           </ul>
         </li>
 

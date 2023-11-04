@@ -4,7 +4,7 @@
 
 @section('contenido')
 
-<div class="container mt-5 col-md-6"">
+<div class="container mt-5 col-md-6">
 <form>
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-person-badge"></i></span>

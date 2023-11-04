@@ -14,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
  Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 }); 
 
 Route::get('/gerenciaRegistroUsuario', function () {
     return view('gerenciaRegistroUsuario');
 });
 
+Route::get('/consultarOrdenCompra', function () {
+    return view('consultarOrdenCompra');
+});
+
+Route::get('/buscarProductos', function () {
+    return view('buscarProductos');
+});
