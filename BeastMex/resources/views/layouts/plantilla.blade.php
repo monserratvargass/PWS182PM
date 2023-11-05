@@ -19,10 +19,6 @@
     @include('partials.navbar')
 
     @yield('contenido')
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 0264784 (Propuesta de interfaces para los formularios)
 </body>
 </html>
