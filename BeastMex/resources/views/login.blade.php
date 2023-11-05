@@ -5,7 +5,8 @@
 @section('contenido')
 
 <div class="container mt-5 col-md-6">
-<form>
+<form method="POST" action="pLogin">
+  @csrf
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
       <div class="form-floating">

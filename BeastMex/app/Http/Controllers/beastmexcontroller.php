@@ -17,4 +17,8 @@ class beastmexcontroller extends Controller
     public function metodoConsultarOC(){
         return view('consultarOrdenCompra');
     }
+
+    public function metodoGuardar(Request $req){
+        return 'Se esta procesando tu inicio de sesion';
+    }
 }
