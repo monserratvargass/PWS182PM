@@ -8,7 +8,8 @@
         <title>@yield('titulo')</title>
     </head>
         <body>
-        @yield('contenido')
+       
         @include ('partials.navbar')
+        @yield('contenido')
         </body>
 </html>
