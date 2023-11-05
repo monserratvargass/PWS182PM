@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\beastmexcontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::get('/', function () {
+/* Route::get('/', function () {
     return view('login');
 }); 
 
@@ -27,4 +29,10 @@ Route::get('/consultarOrdenCompra', function () {
 
 Route::get('/buscarProductos', function () {
     return view('buscarProductos');
-});
+}); */
+
+Route::get('/', [beastmexcontroller::class, 'metodoLogin']);
+
+Route::get('/consultarOrdenCompra', [beastmexcontroller::class, 'metodoConsultarOC']);
+
+Route::get('/buscarProductos', [beastmexcontroller::class, 'metodoBuscarProductos']);
