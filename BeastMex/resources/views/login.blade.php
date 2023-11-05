@@ -10,7 +10,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
       <div class="form-floating">
-        <input type="text" name="txtNombre" class="form-control" placeholder="Ingrese correo">
+        <input type="email" name="txtCorreo" class="form-control" placeholder="Ingrese correo">
         <label for="floatingInputGroup1">Ingrese correo</label>
       </div>
     </div>
