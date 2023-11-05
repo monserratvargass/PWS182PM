@@ -4,10 +4,33 @@
 
 @section('contenido')
 
+@include('sweetalert::alert')
+
 <h2 class="display-1 text-center text-primary">Registro Producto</h2>
 
 <div class="container mt-5 col-md-6">
-<form>
+<div class= "container">
+    @if(session()->has('confirmacion'))
+    <script>
+    
+    Swal.fire(
+  'Todo correcto',
+  'Registro guardado con éxito',
+  'success'
+)
+   </script>
+    @endif
+  
+    @if($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{ $error }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        @endforeach
+    @endif
+
     <form method="POST" action="/guardarRegistro"> 
       @csrf 
     <div class="input-group mb-3">
@@ -77,5 +100,6 @@
     
     <button type="submit" class="btn btn-primary">Registrar producto</button>
   </form>
+</div>
 </div>
 @endsection

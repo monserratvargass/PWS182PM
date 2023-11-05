@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Alert;
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorAlmacenRegistro;
 
@@ -25,14 +25,19 @@ class almacenController extends Controller
         return view('almacenConsultar');
     }
 
-    public function metodoGuardar (validadorAlamcenRegistro $req){
+    public function metodoGuardar (validadorAlmacenRegistro $req){
+       /*  return "se guardo el registro"; ---Prueba de funcionamiento */
+        
         Alert::success('Registro guardado', 'Éxito')->persistent(true);
 
-        return redirect('/')->with('confirmacion','Todo correcto');
+        return redirect('/')->with('confirmacion','Todo correcto'); 
 
     }
 
-    public function metodoGuardarAct (validadorAlamcenRegistro $req){
-        return "se guardo el registro";
+    public function metodoGuardarAct (validadorAlmacenRegistro $req){
+       /*  return "se guardo el registro"; ---Prueba de funcionamiento */
+        Alert::success('Registro guardado', 'Éxito')->persistent(true);
+
+        return redirect('/almacenActualizar')->with('confirmacion','Todo correcto');
     }
 }

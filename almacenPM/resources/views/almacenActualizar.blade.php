@@ -4,17 +4,20 @@
 
 @section('contenido')
 
+@include('sweetalert::alert')
+
 <h2 class="display-1 text-center text-primary">Actualizar Producto</h2>
 
 <div class="container mt-5 col-md-6">
 @if(session()->has('confirmacion'))
     <script>
+   
     Swal.fire(
   'Todo correcto',
-  'Registro guardado',
+  'Registro actualizado con éxito',
   'success'
 )
-    </script>
+  </script>
     @endif
 
     
@@ -28,11 +31,10 @@
         @endforeach
     @endif
 
-<form>
+ 
     <form method="POST" action="/guardarRegistroAct"> 
       @csrf 
-    <div class="input-group mb-3">
-      
+      <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
       <div class="form-floating">
         <input type="text" name="txtNombre" class="form-control" placeholder="Nombre(s)">
@@ -97,7 +99,7 @@
       </div>
     </div>
     
-    <button type="submit" class="btn btn-primary">Actualiar producto</button>
+    <button type="submit" class="btn btn-primary">Actualizar producto</button>
   </form>
 </div>
 @endsection
