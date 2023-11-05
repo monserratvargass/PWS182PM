@@ -39,3 +39,5 @@ Route::get('/buscarProductos', [beastmexcontroller::class, 'metodoBuscarProducto
 
 //Crear una ruta tipo POST
 Route::post('/pLogin', [beastmexcontroller::class, 'metodoGuardar']);
+
+Route::post('/pBuscarProductos', [beastmexcontroller::class, 'metodoGuardar']);

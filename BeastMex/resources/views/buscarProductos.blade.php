@@ -8,7 +8,8 @@
 <p class="fw-medium fs-5 text-center">BUSCAR PRODUCTOS</p>
 </div>
 <div class="container mt-5 col-md-6">
-    <form>
+    <form method="POST" action="pBuscarProductos">
+      @csrf
         <div class="input-group mb-3">
           <span class="input-group-text"><i class="bi bi-box-seam-fill"></i></span>
           <div class="form-floating">

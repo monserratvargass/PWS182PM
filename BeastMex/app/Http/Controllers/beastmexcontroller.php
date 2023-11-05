@@ -19,6 +19,7 @@ class beastmexcontroller extends Controller
     }
 
     public function metodoGuardar(Request $req){
-        return 'Se esta procesando tu inicio de sesion';
+        //return 'Se esta procesando tu inicio de sesion';
+        return 'Se esta procesando tu busqueda de producto';
     }
 }
