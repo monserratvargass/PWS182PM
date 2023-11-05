@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controllers;
+use App\Http\Controllers\beastmexcontrollers;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,32 +14,32 @@ use App\Http\Controllers\Controllers;
 |
 */
 
-Route::get('/',[Controllers::class,'metodoPrincipal'])->name('Principal');
+Route::get('/',[beastmexcontrollers::class,'metodoPrincipal'])->name('Principal');
 
 Route::get('/gerenciaRegistroUsuario', function () {
     return view('gerenciaRegistroUsuario');
 });
 
 //interfaz de ventas consultar productos
-Route::get('/ventasConsultarproducto',[Controllers::class,'metodoMostrarproducto'])->name('Mostrarproducto');
+Route::get('/ventasConsultarproducto',[beastmexcontrollers::class,'metodoMostrarproducto'])->name('Mostrarproducto');
 
-Route::post('Buscarproducto',[Controllers::class,'metodoBuscarproducto'])->name('Buscarproducto');
+Route::post('Buscarproducto',[beastmexcontrollers::class,'metodoBuscarproducto'])->name('Buscarproducto');
 
-// interfaz de ventas
-Route::get('/ventas',[Controllers::class,'metodoRegistroventa'])->name('Registroventa');
+// interfaz de ventas resgistrar tickets
+Route::get('/ventasRegistrartickets',[beastmexcontrollers::class,'metodoRegistroventa'])->name('Registroventa');
 
-Route::post('Guardartickets',[Controller::class,'metodoGuardartickets'])->name('Guardartickets');
+Route::post('Guardartickets',[beastmexcontrollers::class,'metodoGuardartickets'])->name('Guardartickets');
 
 // interfaz de ventas calculo de ganancias
-Route::get('/ventasCalculodeganancias',[Controllers::class,'metodoCalculodeganancias'])->name('Calculodeganancias');
+Route::get('/ventasCalculodeganancias',[beastmexcontrollers::class,'metodoCalculodeganancias'])->name('Calculodeganancias');
 
-Route::post('Mostrarcalculodegancnias',[Controllers::class,'metodoMostrarcalculodegancnias'])->name('Mostrarcalculodegancnias');
+Route::post('Mostrarcalculodegancnias',[beastmexcontrollers::class,'metodoMostrarcalculodegancnias'])->name('Mostrarcalculodegancnias');
 
 // interfaz de ventas consultar tikets
-Route::get('/ventasConsultartickets',[Controllers::class,'metodoConsultartickets'])->name('Consultartickets');
+Route::get('/ventasConsultartickets',[beastmexcontrollers::class,'metodoConsultartickets'])->name('Consultartickets');
 
-Route::post('Mostrartickets',[Controllers::class,'metodoMostrartickets'])->name('Mostrartickets');
+Route::post('Mostrartickets',[beastmexcontrollers::class,'metodoMostrartickets'])->name('Mostrartickets');
 // imprimir tikets
-Route::post('Imprimirtickets',[Controllers::class,'metodoImprimirtickets'])->name('Imprimirtickets');
+Route::post('Imprimirtickets',[beastmexcontrollers::class,'metodoImprimirtickets'])->name('Imprimirtickets');
 
 

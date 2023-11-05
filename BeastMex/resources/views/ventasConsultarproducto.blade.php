@@ -8,7 +8,7 @@
 
 <div class="container">
 
-  @if(session()->has('Registro'))
+  @if(session()->has('Buscarproducto'))
   <script>
     Swal.fire({
       'Exitoso',

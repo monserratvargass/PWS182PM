@@ -8,7 +8,7 @@
 
 <div class="container mt-5 col-md-6">
 
-  @if(session()->has('Registro'))
+  @if(session()->has('Mostrarcalculodeganancias'))
   <script>
     Swal.fire({
       'Exitoso',

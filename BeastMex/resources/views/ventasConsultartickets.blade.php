@@ -8,11 +8,11 @@
 
 <div class="container mt-5 col-md-6">
 
-@if(session()->has('Registro'))
+  @if(session()->has('Mostrartickets'))
   <script>
     Swal.fire({
       'Exitoso',
-      'Registro exitoso',
+      'Resultado exitoso',
       'success'
     });
   </script>
@@ -31,29 +31,30 @@
         @endforeach
     @endif
 
-  <form method="POST" action="/Mostrartickets">
+    <div>
+      <form method="POST" action="/Mostrartickets">
 
-    <div class="input-group mb-3">
+        <div class="input-group mb-3">
         <span class="input-group-text"><i class="bi bi-calendar2-fill"></i></span>
-        <div class="form-floating">
-          <input type="date" name="txtFecha" class="form-control" placeholder="Fecha" value="{{old('txtFecha')}}">
-          <label for="floatingInputGroup1">Fecha</label>
-          {{$errors->first('txtFecha')}}
+          <div class="form-floating">
+            <input type="date" name="txtFecha" class="form-control" placeholder="Fecha" value="{{old('txtFecha')}}">
+            <label for="floatingInputGroup1">Fecha</label>
+            {{$errors->first('txtFecha')}}
+          </div>
         </div>
-    </div>
 
-    <div class="text-center">
-        <button type="submit" class="btn btn-primary">Consultar ticket</button>
-    </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Consultar ticket</button>
+        </div>
 
-    <form method="POST" action="/Imprimirtickets">
-    <div class="text-center  mt-5">
-        <button type="submit" class="btn btn-primary">Descargar ticket</button>
-    </div>
-    </form>
+        <form method="POST" action="/Imprimirtickets">
+          <div class="text-center  mt-5">
+          <button type="submit" class="btn btn-primary">Descargar ticket</button>
+          </div>
+        </form>
 
-  </form>
+      </form>
     
-  </div>
+    </div>
   
 @endsection
