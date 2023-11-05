@@ -7,6 +7,27 @@
 <h2 class="display-1 text-center text-primary">Actualizar Producto</h2>
 
 <div class="container mt-5 col-md-6">
+@if(session()->has('confirmacion'))
+    <script>
+    Swal.fire(
+  'Todo correcto',
+  'Registro guardado',
+  'success'
+)
+    </script>
+    @endif
+
+    
+    @if($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{ $error }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        @endforeach
+    @endif
+
 <form>
     <form method="POST" action="/guardarRegistroAct"> 
       @csrf 

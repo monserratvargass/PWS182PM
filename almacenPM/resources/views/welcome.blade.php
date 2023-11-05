@@ -46,7 +46,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-file-lock2-fill"></i></span>
       <div class="form-floating">
-        <input type="password" name="txtFecha" class="form-control" placeholder="Contraseña">
+        <input type="text" name="txtFecha" class="form-control" placeholder="Contraseña">
         <label for="floatingInputGroup1">Fecha ingreso</label>
       </div>
     </div>
