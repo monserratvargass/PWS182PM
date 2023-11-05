@@ -4,7 +4,7 @@
 
 @section('contenido')
 
-<h2 class="display-1 text-center text-primary">Registro Producto</h2>
+<h2 class="display-1 text-center text-primary">Actualizar Producto</h2>
 
 <div class="container mt-5 col-md-6">
 <form>
@@ -73,7 +73,8 @@
       </div>
     </div>
     
-    <button type="submit" class="btn btn-primary">Registrar producto</button>
+    <button type="submit" class="btn btn-primary">Actualiar producto</button>
   </form>
 </div>
 @endsection
+
