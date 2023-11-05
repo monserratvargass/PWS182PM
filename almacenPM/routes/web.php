@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\almacenController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/',[almacenController::class,'metodoRegistro'])->name('paginaRegistro');
+Route::get('/almacenActualizar',[almacenController::class,'metodoActualizar'])->name('paginaActualizar');
+Route::get('/almacenBuscar',[almacenController::class,'metodoBuscar'])->name('paginaBuscar');
+Route::get('/almacenConsultar',[almacenController::class,'metodoConsultar'])->name('paginaConsultar');
+Route::post('/guardarRegistro',[almacenController::class,'metodoGuardar'])->name('Guardar');
+Route::post('/guardarRegistroAct',[almacenController::class,'metodoGuardarAct'])->name('GuardarAct');

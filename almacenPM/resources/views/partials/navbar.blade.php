@@ -55,9 +55,10 @@
             ALMACEN
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Registrar productos</a></li>
+            <li><a class="dropdown-item" href="/">Registrar productos</a></li>
             <li><a class="dropdown-item" href="#">Consultar productos</a></li>
             <li><a class="dropdown-item" href="#">Buscar productos</a></li>
+            <li><a class="dropdown-item" href="/almacenActualizar">Actualizar productos</a></li>
           </ul>
         </li>
         

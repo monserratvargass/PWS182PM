@@ -8,7 +8,10 @@
 
 <div class="container mt-5 col-md-6">
 <form>
+    <form method="POST" action="/guardarRegistroAct"> 
+      @csrf 
     <div class="input-group mb-3">
+      
       <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
       <div class="form-floating">
         <input type="text" name="txtNombre" class="form-control" placeholder="Nombre(s)">
@@ -44,7 +47,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-file-lock2-fill"></i></span>
       <div class="form-floating">
-        <input type="password" name="txtFecha" class="form-control" placeholder="Contraseña">
+        <input type="text" name="txtFecha" class="form-control" placeholder="Contraseña">
         <label for="floatingInputGroup1">Fecha ingreso</label>
       </div>
     </div>
@@ -52,7 +55,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-file-lock2-fill"></i></span>
       <div class="form-floating">
-        <input type="password" name="txtFolio" class="form-control" placeholder="Contraseña">
+        <input type="text" name="txtFolio" class="form-control" placeholder="Contraseña">
         <label for="floatingInputGroup1">Folio</label>
       </div>
     </div>
@@ -60,7 +63,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-file-lock2-fill"></i></span>
       <div class="form-floating">
-        <input type="password" name="txtCosto" class="form-control" placeholder="Contraseña">
+        <input type="text" name="txtCosto" class="form-control" placeholder="Contraseña">
         <label for="floatingInputGroup1">Costo de compra</label>
       </div>
     </div>
@@ -68,7 +71,7 @@
     <div class="input-group mb-3">
       <span class="input-group-text"><i class="bi bi-file-lock2-fill"></i></span>
       <div class="form-floating">
-        <input type="password" name="txtPrecio" class="form-control" placeholder="Contraseña">
+        <input type="text" name="txtPrecio" class="form-control" placeholder="Contraseña">
         <label for="floatingInputGroup1">Precio de venta</label>
       </div>
     </div>
