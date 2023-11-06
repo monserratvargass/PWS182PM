@@ -22,9 +22,12 @@ class validadorFormbeastmex extends FormRequest
     public function rules(): array
     {
         return [
-            'txtISBN' => 'required|min:13',
-            'txtPaginas' => 'required|numeric',
-            'txtCorreoEditorial' => 'required|email',
+            'txtFecha' => 'required|date',
+            'txtAP' => 'required|text',
+            'txtAM' => 'required|text',
+            'txtCantidad' => 'required|decimal',
+            'txtPrecio' => 'required|decimal',
+            'txtTotalcompra' => 'required|decimal',
         ];
     }
 }
