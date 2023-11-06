@@ -28,16 +28,12 @@ class almacenController extends Controller
     public function metodoGuardar (validadorAlmacenRegistro $req){
        /*  return "se guardo el registro"; ---Prueba de funcionamiento */
         
-        Alert::success('Registro guardado', 'Éxito')->persistent(true);
-
-        return redirect('/')->with('confirmacion','Todo correcto'); 
+       return redirect('/')->with('confirmacion','El producto se guradó correctamente.');
 
     }
 
     public function metodoGuardarAct (validadorAlmacenRegistro $req){
        /*  return "se guardo el registro"; ---Prueba de funcionamiento */
-        Alert::success('Registro guardado', 'Éxito')->persistent(true);
-
-        return redirect('/almacenActualizar')->with('confirmacion','Todo correcto');
+       return redirect('/almacenActualizar')->with('confirmacion','El producto se actualizó correctamente.');
     }
 }

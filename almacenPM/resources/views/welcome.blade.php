@@ -4,22 +4,21 @@
 
 @section('contenido')
 
-@include('sweetalert::alert')
+
 
 <h2 class="display-1 text-center text-primary">Registro Producto</h2>
 
 <div class="container mt-5 col-md-6">
 <div class= "container">
     @if(session()->has('confirmacion'))
-    <script>
-    
-    Swal.fire(
-  'Todo correcto',
-  'Registro guardado con éxito',
-  'success'
-)
-   </script>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{ session('confirmacion')}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     @endif
+
   
     @if($errors->any())
         @foreach ($errors->all() as $error)

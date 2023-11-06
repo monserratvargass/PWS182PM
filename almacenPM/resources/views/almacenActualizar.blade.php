@@ -4,20 +4,18 @@
 
 @section('contenido')
 
-@include('sweetalert::alert')
+
 
 <h2 class="display-1 text-center text-primary">Actualizar Producto</h2>
 
 <div class="container mt-5 col-md-6">
-@if(session()->has('confirmacion'))
-    <script>
-   
-    Swal.fire(
-  'Todo correcto',
-  'Registro actualizado con éxito',
-  'success'
-)
-  </script>
+    @if(session()->has('confirmacion'))
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ session('confirmacion')}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
     @endif
 
     
