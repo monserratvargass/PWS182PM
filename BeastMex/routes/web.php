@@ -21,6 +21,4 @@ Route::get('/gerencia', function () {
     return view('tabmenu');
 });
 
-Route::get('/gerenciaCRUD', function () {
-    return view('partials/gerenciaCRUD');
-});
+Route::post('/guardarUsuario', [gerenciaController::class, 'metodoGuardar'])->name('Guardar');

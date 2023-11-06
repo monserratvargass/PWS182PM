@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 <div class="container">
+  
   <div class="d-block d-sm-none">
     <label for="Tab" class="sr-only">Tab</label>
   
@@ -25,7 +26,14 @@
   </div>
   
   <div id="settings" class="tab-content">
+
+    <div class="input-group mt-3 mb-3">
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+    </div>
+
     <div class="container">
+
       <div class="table-responsive">
           <table class="table table-bordered table-striped">
             <thead>
@@ -123,15 +131,18 @@
   
   <div id="messages" class="tab-content">
       <div class="container text-center">
-              <form action="" class="mb-4">
+              <form method="POST" action="/guardarUsuario" class="mb-4">
                 <div class="mb-3">
+                  
                   <label for="name" class="form-label">Nombre</label>
                   <input
                     class="form-control"
                     type="text"
                     id="name"
+                    name="txtNombre"
                     placeholder="Nombre"
                   />
+                  <p class="text-danger">{{$errors->first('txtNombre')}}</p>
                 </div>
     
                 <div class="row">
@@ -141,8 +152,10 @@
                       class="form-control"
                       type="email"
                       id="email"
+                      name="txtEmail"
                       placeholder="Direccion de Email"
                     />
+                    <p class="text-danger">{{$errors->first('txtEmail')}}</p>
                   </div>
     
                   <div class="col">
@@ -151,8 +164,10 @@
                       class="form-control"
                       type="tel"
                       id="salary"
+                      name="txtSalario"
                       placeholder="Salario"
                     />
+                    <p class="text-danger">{{$errors->first('txtSalario')}}</p>
                   </div>
                 </div>
     

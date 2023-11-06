@@ -22,7 +22,9 @@ class gerenciaValidador extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'txtNombre' => 'required|min:10',
+            'txtEmail' => 'required|email',
+            'txtSalario' => 'required|numeric',
         ];
     }
 }
