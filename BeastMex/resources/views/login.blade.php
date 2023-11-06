@@ -1,10 +1,21 @@
 @extends('layouts.plantilla')
 
-@section('titulo','Principal')
+@section('titulo','Inicio de sesion')
 
 @section('contenido')
 
+@include('sweetalert::alert')
+
 <div class="container mt-5 col-md-6">
+  @if (session()->has('Inicio de sesion'))
+      <script>
+        Swal.fire({
+          'Inicio de sesion exitoso',
+          'Has iniciado sesion',
+          'success',
+        });
+      </script>
+  @endif
 <form method="POST" action="pLogin">
   @csrf
     <div class="input-group mb-3">
